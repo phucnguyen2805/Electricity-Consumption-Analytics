@@ -1,0 +1,36 @@
+# Python
+__pycache__/
+*.py[cod]
+
+# Virtual environment
+.venv/
+.venv_test/
+
+# Secrets
+influxdb-token.txt
+
+# InfluxDB local data
+influxdb-data/
+
+# Large raw dataset
+bdg2/
+
+# Processed data
+data/processed/
+
+# Temporary files
+*.log
+*.tmp
+
+# IDE
+.vscode/
+.idea/
+
+# Local Hadoop binaries
+hadoop/
+
+# Local backup files
+*_backup*.py
+
+# Local InfluxDB runtime
+influxdb/
