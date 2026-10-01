@@ -28,7 +28,7 @@ CHUNK_DIR = (
     / "influx_chunks_utc"
 )
 
-CHUNK_SIZE = 500
+CHUNK_SIZE = 10000
 
 EXPECTED_ROWS = 153016
 

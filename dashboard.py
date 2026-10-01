@@ -533,19 +533,14 @@ def get_sites():
     sql = f"""
         SELECT DISTINCT site_id
         FROM "{MEASUREMENT}"
+        WHERE time >= '2017-01-01T00:00:00Z'
+          AND time < '2018-01-01T00:00:00Z'
         ORDER BY site_id
     """
-
     result = run_query(sql)
-
     if result.empty:
         return []
-
-    return (
-        result["site_id"]
-        .astype(str)
-        .tolist()
-    )
+    return result["site_id"].astype(str).tolist()
 
 
 sites = get_sites()

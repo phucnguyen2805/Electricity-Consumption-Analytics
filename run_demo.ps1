@@ -134,16 +134,13 @@ if (-not $InfluxRunning) {
     Write-Host "[INFO] Starting InfluxDB..."
 
 
-    $InfluxArguments = @(
+   $InfluxArguments = @(
         "serve",
-        "--node-id",
-        "electricity-node",
-        "--object-store",
-        "file",
-        "--data-dir",
-        $InfluxDataDir,
-        "--http-bind",
-        "127.0.0.1:8181"
+        "--node-id", "electricity-node",
+        "--object-store", "file",
+        "--data-dir", $InfluxDataDir,
+        "--http-bind", "127.0.0.1:8181",
+        "--query-file-limit", "10000"
     )
 
 
